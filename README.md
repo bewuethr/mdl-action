@@ -18,7 +18,7 @@ individual rules.
 ## Example usage
 
 ```yml
-uses: 'bewuethr/mdl-action@master'
+uses: 'bewuethr/mdl-action@v1'
 with:
   style-file: 'style.rb'
 ```
