@@ -20,5 +20,5 @@ individual rules.
 ```yml
 uses: 'bewuethr/mdl-action@v1'
 with:
-  style-file: 'style.rb'
+  style-file: '.github/workflows/style.rb'
 ```
