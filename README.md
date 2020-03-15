@@ -5,27 +5,6 @@ the repository.
 
 [1]: https://github.com/markdownlint/markdownlint
 
-## Versions
-
-To get the latest version of a major release, the major release without minor
-and patch release can be used.
-
-For example: if the latest release is v1.1.2, both
-
-```yml
-uses: 'bewuethr/mdl-action@v1'
-```
-
-and
-
-```yml
-uses: 'bewuethr/mdl-action@v1.1.2'
-```
-
-will fetch v1.1.2. The advantage of using just `@v1` is that minor releases and
-patches are included without requiring a change; the advantage of using
-`@v1.1.2` is knowing that the action does 100% the same thing every time.
-
 ## Inputs
 
 ### `style-file`
@@ -65,3 +44,37 @@ rule 'MD029', :style => :ordered
 # Allow inline HTML
 exclude_rule 'MD033'
 ```
+
+## Versions
+
+To get the latest version of a major release, the major release without minor
+and patch release can be used.
+
+To get the latest version of a minor release, the minor release without the
+patch release can be used.
+
+For example: if the latest release is `v1.1.2`,
+
+```yml
+uses: 'bewuethr/mdl-action@v1'
+```
+
+and
+
+```yml
+uses: 'bewuethr/mdl-action@v1.1'
+```
+
+and
+
+```yml
+uses: 'bewuethr/mdl-action@v1.1.2'
+```
+
+will fetch v1.1.2. The advantage of using just `@v1` is that minor releases and
+patches are included without requiring a change; the advantage of using
+`@v1.1.2` is knowing that the action does 100% the same thing every time.
+
+This is done via the [release-tag-tracker][2] action.
+
+[4]: https://github.com/marketplace/actions/release-tag-tracker
