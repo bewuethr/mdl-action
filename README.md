@@ -1,5 +1,8 @@
 # mdl-action
 
+![Linting](https://github.com/bewuethr/mdl-action/workflows/Linting/badge.svg)
+![Move release tags](https://github.com/bewuethr/mdl-action/workflows/Move%20release%20tags/badge.svg)
+
 This action runs the Ruby Markdown linter [mdl][1] on every Markdown file in
 the repository.
 
