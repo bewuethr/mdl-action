@@ -74,10 +74,10 @@ and
 uses: 'bewuethr/mdl-action@v1.1.2'
 ```
 
-will fetch v1.1.2. The advantage of using just `@v1` is that minor releases and
+will fetch `v1.1.2`. The advantage of using just `@v1` is that minor releases and
 patches are included without requiring a change; the advantage of using
 `@v1.1.2` is knowing that the action does 100% the same thing every time.
 
-This is done via the [release-tag-tracker][2] action.
+This is done via the [release-tag-tracker][4] action.
 
 [4]: https://github.com/marketplace/actions/release-tag-tracker
