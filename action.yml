@@ -1,4 +1,4 @@
-name: 'Run mdl'
+name: 'Run markdownlint (mdl)'
 author: 'Benjamin Wuethrich'
 description: 'Run Markdown linter with given style file'
 inputs:
