@@ -22,9 +22,9 @@ individual rules.
 ## Example usage
 
 ```yml
-uses: 'bewuethr/mdl-action@v1'
+uses: bewuethr/mdl-action@v1
 with:
-  style-file: '.github/workflows/style.rb'
+  style-file: .github/workflows/style.rb
 ```
 
 An example style file might look like this:
@@ -59,19 +59,19 @@ patch release can be used.
 For example: if the latest release is `v1.1.2`,
 
 ```yml
-uses: 'bewuethr/mdl-action@v1'
+uses: bewuethr/mdl-action@v1
 ```
 
 and
 
 ```yml
-uses: 'bewuethr/mdl-action@v1.1'
+uses: bewuethr/mdl-action@v1.1
 ```
 
 and
 
 ```yml
-uses: 'bewuethr/mdl-action@v1.1.2'
+uses: bewuethr/mdl-action@v1.1.2
 ```
 
 will fetch `v1.1.2`. The advantage of using just `@v1` is that minor releases

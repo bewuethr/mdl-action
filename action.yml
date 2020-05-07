@@ -1,15 +1,15 @@
-name: 'Run markdownlint (mdl)'
-author: 'Benjamin Wuethrich'
-description: 'Run Markdown linter with given style file'
+name: Run markdownlint (mdl)
+author: Benjamin Wuethrich
+description: Run Markdown linter with given style file
 inputs:
   style-file:
-    description: 'Style file for mdl to use'
+    description: Style file for mdl to use
     required: false
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: docker
+  image: Dockerfile
   args:
     - ${{ inputs.style-file }}
 branding:
-  icon: 'check-circle'
-  color: 'green'
+  icon: check-circle
+  color: green
