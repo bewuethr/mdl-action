@@ -10,6 +10,7 @@ on:
 jobs:
   yamllint:
     runs-on: ubuntu-22.04
+    name: Run yamllint
     steps:
       - name: Check out code
         uses: actions/checkout@v3.1.0
@@ -27,6 +28,7 @@ jobs:
 
   markdownlint:
     runs-on: ubuntu-22.04
+    name: Run markdownlint
     steps:
       - name: Check out code
         uses: actions/checkout@v3.1.0
@@ -44,9 +46,10 @@ jobs:
 
   shellcheck:
     runs-on: ubuntu-22.04
+    name: Run ShellCheck
     steps:
       - name: Check out code
         uses: actions/checkout@v3.1.0
 
-      - name: Run shellcheck
+      - name: Run ShellCheck
         uses: bewuethr/shellcheck-action@v2
