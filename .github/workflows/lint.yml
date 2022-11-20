@@ -53,3 +53,9 @@ jobs:
 
       - name: Run ShellCheck
         uses: bewuethr/shellcheck-action@v2
+
+  lint:
+    name: Run super-linter job
+    uses: bewuethr/workflows/.github/workflows/linter.yml@main
+    with:
+      validate-dockerfile: true
