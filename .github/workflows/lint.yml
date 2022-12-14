@@ -13,7 +13,7 @@ jobs:
     name: Run yamllint
     steps:
       - name: Check out code
-        uses: actions/checkout@v3.1.0
+        uses: actions/checkout@v3.2.0
 
       - name: Get yamllint config file from dotfiles
         env:
@@ -31,7 +31,7 @@ jobs:
     name: Run markdownlint
     steps:
       - name: Check out code
-        uses: actions/checkout@v3.1.0
+        uses: actions/checkout@v3.2.0
 
       - name: Get mdl style file from dotfiles
         env:
@@ -49,7 +49,7 @@ jobs:
     name: Run ShellCheck
     steps:
       - name: Check out code
-        uses: actions/checkout@v3.1.0
+        uses: actions/checkout@v3.2.0
 
       - name: Run ShellCheck
         uses: bewuethr/shellcheck-action@v2
