@@ -7,6 +7,10 @@ on:
       - main
   pull_request:
 
+permissions:
+  contents: read
+  statuses: write
+
 jobs:
   yamllint:
     runs-on: ubuntu-22.04
@@ -57,5 +61,9 @@ jobs:
   lint:
     name: Run super-linter job
     uses: bewuethr/workflows/.github/workflows/linter.yml@main
+    permissions:
+      contents: read
+      packages: read
+      statuses: write
     with:
       validate-dockerfile: true
