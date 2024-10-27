@@ -26,7 +26,7 @@ Defaults to current directory `.` if a directory is not specified.
 
 ## Example usage
 
-### with style-file
+### With style-file
 
 ```yml
 uses: bewuethr/mdl-action@v1
@@ -34,7 +34,7 @@ with:
   style-file: .github/workflows/style.rb
 ```
 
-### with style-file and directory
+### With style-file and directory
 
 ```yml
 uses: bewuethr/mdl-action@v1
