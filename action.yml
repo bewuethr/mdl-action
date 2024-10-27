@@ -5,10 +5,15 @@ inputs:
   style-file:
     description: Style file for mdl to use
     required: false
+  directory:
+    description: Directory to run mdl against
+    required: false
+    default: '.'
 runs:
   using: docker
   image: Dockerfile
   args:
+    - ${{ inputs.directory }}
     - ${{ inputs.style-file }}
 branding:
   icon: check-circle
