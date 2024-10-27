@@ -13,8 +13,8 @@ runs:
   using: docker
   image: Dockerfile
   args:
-    - ${{ inputs.directory }}
     - ${{ inputs.style-file }}
+    - ${{ inputs.directory }}
 branding:
   icon: check-circle
   color: green
