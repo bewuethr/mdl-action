@@ -1,7 +1,7 @@
 #!/bin/sh
 
-stylefile=$2
-directory=$1
+stylefile=$1
+directory=$2
 
 if [ -n "$stylefile" ]; then
 	mdl --style "$GITHUB_WORKSPACE/$stylefile" "$directory"
