@@ -44,7 +44,7 @@ jobs:
         run: curl "$STYLE_FILE" > .github/workflows/style.rb
 
       - name: Run Markdown linter
-        uses: bewuethr/mdl-action@v1
+        uses: ./.
         with:
           style-file: .github/workflows/style.rb
 
