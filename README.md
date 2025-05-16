@@ -16,8 +16,8 @@ repository.
 styles][cs] to learn about markdownlint style files, and [`RULES.md`] for the
 individual rules.
 
-[cs]: <https://github.com/markdownlint/markdownlint/blob/master/docs/creating_styles.md>
-[`RULES.md`]: <https://github.com/markdownlint/markdownlint/blob/master/docs/RULES.md>
+[cs]: <https://github.com/markdownlint/markdownlint/blob/main/docs/creating_styles.md>
+[`RULES.md`]: <https://github.com/markdownlint/markdownlint/blob/main/docs/RULES.md>
 
 ### `directory`
 
