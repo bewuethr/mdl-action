@@ -1,4 +1,4 @@
-FROM ruby:3.4.7-alpine3.21
-RUN gem install mdl -v 0.13.0
+FROM ruby:4.0.1-alpine3.22
+RUN gem install mdl -v 0.15.0
 COPY runmdl /runmdl
 ENTRYPOINT ["/runmdl"]
