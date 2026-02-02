@@ -11,45 +11,47 @@ permissions:
   contents: read
   statuses: write
 
+env:
+  contents: repos/bewuethr/dotfiles/contents
+
 jobs:
   yamllint:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     name: Run yamllint
     steps:
       - name: Check out code
         uses: actions/checkout@v6.0.2
 
       - name: Get yamllint config file from dotfiles
-        env:
-          # yamllint disable-line rule:line-length
-          CONFIG_FILE: https://raw.githubusercontent.com/bewuethr/dotfiles/master/.config/yamllint/config
-        run: curl "$CONFIG_FILE" > .github/workflows/yamllintconfig
+        run: |
+          gh api "$contents/.config/yamllint/config" \
+              --jq '.content | @base64d' \
+              > .yamllint
 
       - name: Run YAML linter
         uses: bewuethr/yamllint-action@v1
         with:
-          config-file: .github/workflows/yamllintconfig
+          config-file: .yamllint
 
   markdownlint:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     name: Run markdownlint
     steps:
       - name: Check out code
         uses: actions/checkout@v6.0.2
 
       - name: Get mdl style file from dotfiles
-        env:
-          # yamllint disable-line rule:line-length
-          STYLE_FILE: https://raw.githubusercontent.com/bewuethr/dotfiles/master/.config/mdl/style.rb
-        run: curl "$STYLE_FILE" > .github/workflows/style.rb
+        run: |
+          gh api "$contents/.config/mdl/style.rb" --jq '.content | @base64d' \
+              > .mdl_style.rb
 
       - name: Run Markdown linter
         uses: ./.
         with:
-          style-file: .github/workflows/style.rb
+          style-file: .mdl_style.rb
 
   shellcheck:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     name: Run ShellCheck
     steps:
       - name: Check out code
