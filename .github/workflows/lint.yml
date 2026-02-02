@@ -28,6 +28,7 @@ jobs:
         run: |
           gh api "$contents/.config/yamllint/config" \
               --jq '.content | @base64d' \
+              | sed '$d' \
               > .yamllint
 
       - name: Run YAML linter
