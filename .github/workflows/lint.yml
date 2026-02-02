@@ -23,6 +23,8 @@ jobs:
         uses: actions/checkout@v6.0.2
 
       - name: Get yamllint config file from dotfiles
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
           gh api "$contents/.config/yamllint/config" \
               --jq '.content | @base64d' \
@@ -41,6 +43,8 @@ jobs:
         uses: actions/checkout@v6.0.2
 
       - name: Get mdl style file from dotfiles
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
           gh api "$contents/.config/mdl/style.rb" --jq '.content | @base64d' \
               > .mdl_style.rb
